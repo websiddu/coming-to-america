@@ -25,11 +25,16 @@
     font-size: 17px;
     line-height: 1.5;
     margin-bottom: 40px;
+    cursor: pointer;
+    height: auto;
+    transition: height 0.3s ease-in;
     &.completed {
       color: #888;
-      height: 150px;
+      height: 134px;
       overflow: hidden;
       box-shadow: 0 -70px 70px -43px #eee inset;
+      cursor: pointer;
+      transition: height 0.3s ease-in;
     }
     h5{
       counter-increment: step;
