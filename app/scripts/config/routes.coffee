@@ -3,19 +3,19 @@
 @appConfig = ($routeProvider, $locationProvider) ->
   $routeProvider
   .when("/",
-    templateUrl: "templates/index.html"
+    templateUrl: "templates/bank.html"
     controller: "mainController"
   )
-  .when("/startup",
-    templateUrl: "templates/user/startup.html"
+  .when("/phone",
+    templateUrl: "templates/phone.html"
     controller: "mainController"
   )
-  .when("/user",
-    templateUrl: "templates/user/index.html"
+  .when("/internet",
+    templateUrl: "templates/internet.html"
     controller: "mainController"
   )
-  .when("/project",
-    templateUrl: "templates/project/index.html"
+  .when("/job",
+    templateUrl: "templates/job.html"
     controller: "mainController"
   )
   .when("/search",

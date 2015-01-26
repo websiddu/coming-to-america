@@ -14,9 +14,6 @@
   $scope.progress = ->
     console.log "Progress"
 
-
-
-
 @mainController.$inject = ['$scope', '$window', '$rootScope', '$http', '$modal', '$location']
 
 bbApp.controller('mainController', mainController);
