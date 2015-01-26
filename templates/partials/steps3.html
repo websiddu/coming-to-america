@@ -1,0 +1,84 @@
+<ul class="task-steps">
+  <li ng-click="toggleCompleted('step1')" ng-class='{completed: status.step1}'>
+    <h5 class="step-title"> Choose an internet service provider (ISP)  <span class="pull-right" ng-if="status.step1"> <small><label for="" class="label label-success">Completed</label></small></span></h5>
+    <p>This could be the company that provides your telephone line or it could be one of the many independent providers. To help you choose, have a look at one of the many comparison websites and ask people you know for their opinion. </p>
+    <p>
+    When choosing a supplier, you need to take into account the various packages on offer. These will differ in price depending on the maximum speed they offer and the monthly usage allowance.
+    </p>
+    <strong class="text-muted">Recommended ISP's</strong>
+    <div class="row">
+      <div class="reco">
+        <div class="col-lg-4"><div class="reco-box">Comcast 29.99 <span>Recommended by most users.</span></div></div>
+        <div class="col-lg-4"><div class="reco-box">Century Link 24.99 <span>Near by your current locaiton.</span></div></div>
+        <div class="col-lg-4"><div class="reco-box">Cascadelink <span>High rated</span></div></div>
+        <div class="col-lg-2"></div>
+      </div>
+    </div>
+    <p class="alert alert-info">
+    The speed is measured in megabits (Mb). A 1Mb connection speed is perfectly acceptable for viewing websites. However, if you want to be able to play games or watch TV online or share your internet between two or more computers, you should choose at least 2Mb.
+    <br><br>
+    Some ISPs offer up to 24Mb or even 50Mb. But the speed you actually get also depends on many other things, not least the distance of your computer from the telephone exchange and the condition of the cables. This can be because of the copper telephone wires being used.
+    </p>
+  </li>
+  <li ng-class='{completed: status.step2}'>
+    <h5 class="step-title" ng-click="toggleCompleted('step2')" > Navigate to your ISP's offices <span class="pull-right" ng-if="status.step2"> <small><label for="" class="label label-success">Completed</label></small></span></h5>
+    <p>
+    Based on your mode of transportation the time to reach to the destination varies, please use google maps to navigate to the locaiton.
+    </p>
+    <p>
+    <em class="icon icon-location"></em> Current location &rarr; <select name="" id=""><option value="">Comcast, Seattle</option></select> &nbsp;&nbsp;&nbsp; <a class="btn btn-sm btn-info" href="https://www.google.com/maps/dir/47.6568282,-122.3195644/U.S.+Bank,+8th+Avenue+North,+Seattle,+WA/@47.6414085,-122.3526044,14z/data=!3m1!4b1!4m10!4m9!1m1!4e1!1m5!1m1!1s0x5490153ea6aa6b7f:0xcb8f7cf8e388b61b!2m2!1d-122.341379!2d47.628577!3e3" target="_blank">Find route </a>
+    </p>
+    <p class="alert alert-warning">Don't forget to carry your passport and some money for initial deposit.</p>
+  </li>
+  <li ng-click="toggleCompleted('step4')" ng-class='{completed: status.step4}'>
+    <h5 class="step-title"> Register for an appointment <span class="pull-right" ng-if="status.step4"> <small><label for="" class="label label-success">Completed</label></small></span></h5>
+    <p>
+    Most of the customer care centers will have a token system. You have to go and register youself using a touch screen device and will spit out a token number. Having that token number, wait for you turn.
+    </p>
+  </li>
+  <li ng-class='{completed: status.step5}'>
+    <h5 class="step-title" ng-click="toggleCompleted('step5')"> Ask for different options <span class="pull-right" ng-if="status.step5"> <small><label for="" class="label label-success">Completed</label></small></span></h5>
+    <p>
+    When your turn arrives, you can meet a customer care employee. You can ask for new plans or if you have plan in you mind you can ask for that. Once you decicded on the plan you will be asked a squence of questions. Be prpearted to answer the following quesitons
+    </p>
+    <ul>
+      <li> You full name, address</li>
+      <li> SSN or StateId if you have one </li>
+      <li> Passport if you dont have SSN or stateID</li>
+      <li> Initial Deposit</li>
+    </ul>
+  </li>
+  <li ng-class='{completed: status.step6}'>
+    <h5 class="step-title" ng-click="toggleCompleted('step6')"> Renting or Buying the equipment <span class="pull-right" ng-if="status.step6"> <small><label for="" class="label label-success">Completed</label></small></span></h5>
+    <p>
+    You need a modem and a router for the internet connection to work. If you have your own equipment its well and good. If you dont have your own equipment you can rent it for the ISP's with some $8 per month from comcast and it varies based on the ISP.
+    </p>
+    <p class="alert alert-info">
+    <strong>Modem</strong><br>
+    A modem is a device or program that enables a computer to transmit data over, for example, telephone or cable lines. Computer information is stored digitally, whereas information transmitted over telephone lines is transmitted in the form of analog waves. A modem converts between these two forms. <br>
+    <img src="http://pc.net/images/db/cisco_cable_modem.png" alt="">
+    <br>
+    You can buy them on line <a href="http://www.amazon.com/b?node=284715" target="_blank">here</a>
+    </p>
+    <p class="alert alert-info">
+    <strong>Router</strong><br>
+    A modem is a device or program that enables a computer to transmit data over, for example, telephone or cable lines. Computer information is stored digitally, whereas information transmitted over telephone lines is transmitted in the form of analog waves. A modem converts between these two forms.
+    <br>
+    <img src="http://pc.net/images/db/netgear_router.png" alt="">
+    <br>
+    You can buy them on line <a href="http://www.amazon.com/b?node=284715" target="_blank">here</a>
+    </p>
+  </li>
+  <li ng-class='{completed: status.step7}'>
+    <h5 class="step-title" ng-click="toggleCompleted('step7')">  Setting up the conneciton<span class="pull-right" ng-if="status.step7"> <small><label for="" class="label label-success">Completed</label></small></span></h5>
+    <p>
+    Based on the ISP's your activation time varies. Follow your ISP's instruciton manual to connect and activate the modem. This will generally a phone call to the ISP's customer care.
+    </p>
+  </li>
+  <li ng-class='{completed: status.step8}'>
+    <h5 class="step-title" ng-click="toggleCompleted('step8')"> Paying the bill<span class="pull-right" ng-if="status.step8"> <small><label for="" class="label label-success">Completed</label></small></span></h5>
+    <p>
+    When your bill appers you can pay it either by visiitng to the nearest office or throught your ISP's website. You can log into your account on the ISP's website using the user name and password given by the ISP's and pay your bill with your credit card or debit card.
+    </p>
+  </li>
+</ul>
