@@ -173,7 +173,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= config.app %>/scripts',
           src: '{,*/}*.{coffee,litcoffee,coffee.md}',
-          dest: '<%= config.app %>/js',
+          dest: '.tmp/scripts',
           ext: '.js'
         }]
       },
@@ -187,7 +187,6 @@ module.exports = function (grunt) {
         }]
       }
     },
-
     // Add vendor prefixed styles
     autoprefixer: {
       options: {

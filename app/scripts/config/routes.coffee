@@ -3,7 +3,7 @@
 @appConfig = ($routeProvider, $locationProvider) ->
   $routeProvider
   .when("/",
-    templateUrl: "templates/landing/index.html"
+    templateUrl: "templates/index.html"
     controller: "mainController"
   )
   .when("/startup",
