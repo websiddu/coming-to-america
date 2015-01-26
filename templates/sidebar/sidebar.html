@@ -1,0 +1,25 @@
+<div class="col-lg-4 col-sm-4 sidebar">
+  <h2 class="sidbar-title"> Your progress</h2>
+  <p class="text-muted text-right"> <strong>You completed 6 steps out of 10 </strong></p>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+      60%
+    </div>
+  </div>
+  <p> <strong class="text-muted">You Started: </strong> 25th Jan 2015, Sunday.</p>
+  <p> <strong class="text-muted">People completed this: </strong> 224</p>
+  <br />
+
+  <h2 class="sidbar-title"> People at your current step</h2>
+  <ul class="people-list">
+    <li ng-repeat="user in [1, 2, 3, 4]">
+      <a href=""><img src="images/av/{{$index + 1}}.jpg" alt=""></a>
+    </li>
+  </ul>
+  <h2 class="sidbar-title"> People completed this task</h2>
+  <ul class="people-list">
+    <li ng-repeat="user in [5, 6, 7, 8, 1, 2, 3, 4]">
+      <a href=""><img src="images/av/{{user}}.jpg" alt=""></a>
+    </li>
+  </ul>
+</div>
