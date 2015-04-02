@@ -3,6 +3,10 @@
 @appConfig = ($routeProvider, $locationProvider) ->
   $routeProvider
   .when("/",
+    templateUrl: "templates/index.html"
+    controller: "mainController"
+  )
+  .when("/bank",
     templateUrl: "templates/bank.html"
     controller: "mainController"
   )
