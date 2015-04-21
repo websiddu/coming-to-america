@@ -1,5 +1,73 @@
 <div ng-include="'templates/common/header.html'"></div>
 <div class="container-fluid page">
+  <div class="row">
+    <div class="col-lg-8 col-md-8">
+      <div class="filter">
+        <div class="filter-topic">
+          <span class="topic-heading">Topic:</span>
+          <ul>
+            <li ng-repeat="topic in topics">
+              <div class="checkbox" ng-class="{active: topic.sel}">
+                <label>
+                  <input type="checkbox" name="{{topic.val}}" id="{{topic.val}}" value="{{topic.val}}" ng-model="topic.sel">
+                  {{topic.val}}
+                </label>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="filter-type">
+          <span class="topic-heading">Type:</span>
+          <ul>
+            <li ng-repeat="type in types">
+              <div class="checkbox" ng-class="{active: filter[type.val]}">
+                <label>
+                  <input type="checkbox" name="{{type.val}}" id="{{type.val}}" value="{{type.val}}" ng-model="filter[type.val]">
+                  {{type.val}}
+                </label>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <br>
+      <div class="results">
+        <div class="items">
+          <div class="item" ng-repeat="result in filtered=(results | filter:filterByTopic) track by $index">
+            <div class="item-lable" ng-class="result.class">
+              {{result.type}}
+            </div>
+            <div class="item-media">
+              <img ng-src="{{result.img}}" alt="" />
+            </div>
+            <div class="item-content">
+              <h3 class="item-title">
+                {{result.title}}
+              </h3>
+              <p>
+
+              </p>
+              <div class="item-tags">
+                <ul class="tags-list">
+                  <li ng-repeat="tag in result.tags">{{tag}}</li>
+                </ul>
+              </div>
+              <div class="item-stats">
+                <ul class="stats-list">
+                  <li><em class="icon icon-caret-up"></em> {{result.votes}} Up votes</li>
+                  <li><em class="icon icon-eye2"></em> {{result.views}} Views</li>
+                  <li ng-if="result.rating"><em class="icon  icon-star2"></em> {{result.rating}}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4">
+
+    </div>
+  </div>
 
 
 

@@ -8182,6 +8182,49 @@ textarea.no-resize {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+input[type=checkbox],
+input[type=radio] {
+  -webkit-appearance: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  background-image: left top;
+  background-size: 18px;
+}
+input[type=checkbox].checkbox-small,
+input[type=radio].checkbox-small {
+  width: 13px;
+  height: 13px;
+  line-height: 15px;
+}
+input[type=checkbox]:active:not(:disabled),
+input[type=radio]:active:not(:disabled) {
+  background-position: left center;
+}
+input[type=checkbox]:checked,
+input[type=radio]:checked {
+  background-position: left bottom;
+}
+input[type=checkbox]:disabled,
+input[type=radio]:disabled {
+  opacity: 0.75;
+}
+input[type=radio] {
+  background-image: url('../images/radio.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+input[type=checkbox] {
+  background-image: url('../images/radio.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+label.normal input {
+  vertical-align: text-bottom;
+}
 @charset "UTF-8";
 /*!
 Animate.css - http://daneden.me/animate
@@ -11166,6 +11209,7 @@ div.token-input-dropdown-facebook ul li.token-input-selected-dropdown-item-faceb
 }
 body {
   padding-top: 70px;
+  background-color: #efefea;
 }
 .container-fluid {
   max-width: 1200px;
@@ -11173,7 +11217,6 @@ body {
 .page {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.53);
   min-height: 500px;
-  padding-left: 50px;
   background: #fff;
 }
 .task-sub-title {
@@ -11204,21 +11247,143 @@ body {
   margin: 0;
   padding: 0;
 }
-.searchAnimate.ng-enter,
-.searchAnimate.ng-leave {
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  -ms-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
+.filter {
+  margin: 70px -15px 20px;
+  overflow: hidden;
 }
-.searchAnimate.ng-enter.searchAnimate.ng-enter-active,
-.searchAnimate.ng-leave {
-  opacity: 1;
+.filter-topic,
+.filter-type {
+  border-top: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
+  padding: 0 20px 12px;
+  position: relative;
+  overflow: hidden;
 }
-.searchAnimate.ng-leave.searchAnimate.ng-leave-active,
-.searchAnimate.ng-enter {
-  opacity: 0;
+.filter-topic span.topic-heading,
+.filter-type span.topic-heading {
+  position: absolute;
+  color: #999;
+  display: inline-block;
+  top: 13px;
+  text-transform: uppercase;
+  font-weight: bold;
+  left: 12px;
+}
+.filter-topic ul,
+.filter-type ul {
+  margin: 0;
+  padding: 0;
+  float: left;
+  margin-left: 50px;
+  list-style-type: none;
+}
+.filter-topic ul li,
+.filter-type ul li {
+  display: inline-block;
+  margin-right: 12px;
+  line-height: 28px;
+  padding: 12px 0 0;
+  font-size: 13px;
+  color: #555;
+}
+.filter-topic ul li .checkbox,
+.filter-type ul li .checkbox {
+  margin: 0;
+  padding: 0 15px 0 10px;
+  background: #fff;
+  border: solid 1px #ddd;
+  border-radius: 20px;
+}
+.filter-topic ul li .checkbox.active,
+.filter-type ul li .checkbox.active {
+  border-size: 2px;
+  border-color: #4A89DC;
+  color: #43435b;
+}
+.filter-topic ul li .checkbox input,
+.filter-type ul li .checkbox input {
+  position: relative;
+  vertical-align: -3.5px;
+  margin-right: 3px;
+}
+.filter-topic ul li .checkbox input:focus,
+.filter-type ul li .checkbox input:focus {
+  outline: 0;
+}
+.filter-type {
+  border-top: 0;
+  border-bottom: solid 1px #ccc;
+}
+.results {
+  margin-left: 45px;
+}
+.item {
+  cursor: pointer;
+  padding: 20px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-bottom: 35px;
+  border-radius: 5px;
+}
+.item .item-media {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 80px;
+  width: 80px;
+}
+.item .item-media img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: solid 2px #eee;
+}
+.item .item-content {
+  padding-left: 95px;
+  min-height: 80px;
+}
+.item .item-title {
+  font-size: 23px;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+.item-lable {
+  position: absolute;
+  color: #fff;
+  padding: 2px 10px 2px 16px;
+  font-size: 14px;
+  font-weight: 200;
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+.tags-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+.tags-list li {
+  padding: 1px 10px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border: solid 1px #ddd;
+}
+.stats-list {
+  list-style-type: none;
+  margin: 5px 0 0;
+  padding: 0;
+}
+.stats-list li {
+  font-size: 13px;
+  margin-right: 20px;
+  display: inline-block;
+  line-height: 18px;
+}
+.stats-list li em {
+  color: #888;
+  font-size: 18px;
 }
 .navbar-brand {
   line-height: 70px;
