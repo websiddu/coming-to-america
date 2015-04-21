@@ -1,7 +1,6 @@
 <div ng-include="'templates/common/header.html'"></div>
 <div class="container-fluid page">
-  <div class="row">
-    <div class="col-lg-8 col-md-8">
+
       <div class="filter">
         <div class="filter-topic">
           <span class="topic-heading">Topic:</span>
@@ -20,9 +19,9 @@
           <span class="topic-heading">Type:</span>
           <ul>
             <li ng-repeat="type in types">
-              <div class="checkbox" ng-class="{active: filtert[type.val]}">
+              <div class="checkbox" ng-class="{active: filter[type.val]}">
                 <label>
-                  <input type="checkbox" name="{{type.val}}" id="{{type.val}}" value="{{type.val}}" ng-model="filtert[type.val]">
+                  <input type="checkbox" name="{{type.val}}" id="{{type.val}}" value="{{type.val}}" ng-model="filter[type.val]">
                   {{type.val}}
                 </label>
               </div>
@@ -30,10 +29,17 @@
           </ul>
         </div>
       </div>
+  <div class="row">
+    <div class="col-lg-2 col-md-2">
+
+    </div>
+
+    <div class="col-lg-8 col-md-8">
+
       <br>
       <div class="results">
         <div class="items">
-          <div class="item" ng-repeat="result in filtered=(results | filter:filterByTopic) track by $index">
+          <div class="item" ng-click="takeMe(result.url)" ng-repeat="result in filtered=(results | filter:filterByTopic) track by $index">
             <div class="item-lable" ng-class="result.class">
               {{result.type}}
             </div>
@@ -64,7 +70,7 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-4 col-md-4">
+    <div class="col-lg-2 col-md-2">
 
     </div>
   </div>

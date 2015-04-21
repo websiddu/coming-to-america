@@ -1,5 +1,16 @@
 [
     {
+        "title": "How to find parttime job oncampus",
+        "tags": "Employment",
+        "type": "Guides",
+        "votes": 200,
+        "views": 22,
+        "rating": "4.5/5",
+        "img": "images/d/job.png",
+        "class": "bgc1",
+        "url": "job"
+    },
+    {
         "title": "How to apply for a CPT for summer internship?",
         "tags": "Legal",
         "type": "Guides",
@@ -7,7 +18,8 @@
         "views": 2000,
         "rating": "4.5/5",
         "img": "images/d/internship.png",
-        "class": "bgc1"
+        "class": "bgc1",
+        "url": "job"
     },
     {
         "title": "Spot available in T Mobile family plan.",
@@ -17,7 +29,8 @@
         "views": 200,
         "rating": "4.1/5",
         "img": "images/d/help.png",
-        "class": "bgc4"
+        "class": "bgc4",
+        "url": "phone"
     },
     {
         "title": "How to find temporary housing around the campus?",
@@ -27,7 +40,8 @@
         "views": 200,
         "rating": "4.1/5",
         "img": "images/d/housing.png",
-        "class": "bgc1"
+        "class": "bgc1",
+        "url": "job"
     },
     {
         "title": "Where can I get haldhi ?",
@@ -36,7 +50,8 @@
         "votes": 130,
         "views": 200,
         "img": "images/d/question.png",
-        "class": "bgc3"
+        "class": "bgc3",
+        "url": "phone"
     },
     {
         "title": "How to apply for a CPT for summer internship?",
@@ -46,6 +61,39 @@
         "views": 2000,
         "rating": "4.5/5",
         "img": "images/d/internship.png",
-        "class": "bgc1"
+        "class": "bgc1",
+        "url": "phone"
+    },
+    {
+        "title": "Where can I get haldhi ?",
+        "tags": "Food",
+        "type": "Question",
+        "votes": 10,
+        "views": 220,
+        "img": "images/d/question.png",
+        "class": "bgc3",
+        "url": "phone"
+    },
+    {
+        "title": "Need help in moving my furniture",
+        "tags": "Social",
+        "type": "Help",
+        "votes": 130,
+        "views": 200,
+        "rating": "4.1/5",
+        "img": "images/d/help.png",
+        "class": "bgc4",
+        "url": "phone"
+    },
+    {
+        "title": "How to get a health insurance plan?",
+        "tags": "Health",
+        "type": "Guides",
+        "votes": 22,
+        "views": 300,
+        "rating": "4.5/5",
+        "img": "images/d/health.png",
+        "class": "bgc1",
+        "url": "job"
     }
 ]

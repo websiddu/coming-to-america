@@ -33,6 +33,9 @@
 
   $scope.filter = {};
 
+  $scope.takeMe = (url) ->
+    $location.url(url)
+
   $scope.init = ->
     $http
       url: "data/search-results.json"
@@ -40,7 +43,7 @@
       $scope.results = data;
 
   $scope.filterByTopic = (item) ->
-    return $scope.filter[item.tags] || noFilter($scope.filter)
+    return $scope.filter[item.tags] || $scope.filter[item.type] || noFilter($scope.filter)
 
   noFilter = (filterObj) ->
     for key, val of filterObj
