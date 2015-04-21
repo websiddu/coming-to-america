@@ -14,7 +14,7 @@
     $scope.status[step] = !$scope.status[step]
 
   $scope.topics = [
-    { val: 'Any', sel: false },
+    # { val: 'Any', sel: false },
     { val: 'Housing', sel: false },
     # { val: 'Transportation', sel: false },
     { val: 'Employment', sel: false },
@@ -24,7 +24,7 @@
     {  val: 'Food', sel: false }
   ]
   $scope.types = [
-    {val: 'Any', sel: false },
+    # {val: 'Any', sel: false },
     {val: 'Guides', sel: false },
     {val: 'Help', sel: false },
     {val: 'Question', sel: false },
@@ -40,11 +40,10 @@
       $scope.results = data;
 
   $scope.filterByTopic = (item) ->
-    return $scope.filter[item.tags] || noFilter($scope.filter);
+    return $scope.filter[item.tags] || noFilter($scope.filter)
 
   noFilter = (filterObj) ->
     for key, val of filterObj
-      console.log key
       if (filterObj[key])
         return false
 

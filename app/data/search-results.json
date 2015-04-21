@@ -37,5 +37,15 @@
         "views": 200,
         "img": "images/d/question.png",
         "class": "bgc3"
+    },
+    {
+        "title": "How to apply for a CPT for summer internship?",
+        "tags": "Legal",
+        "type": "Guides",
+        "votes": 200,
+        "views": 2000,
+        "rating": "4.5/5",
+        "img": "images/d/internship.png",
+        "class": "bgc1"
     }
 ]

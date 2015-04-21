@@ -7,9 +7,9 @@
           <span class="topic-heading">Topic:</span>
           <ul>
             <li ng-repeat="topic in topics">
-              <div class="checkbox" ng-class="{active: topic.sel}">
+              <div class="checkbox" ng-class="{active: filter[topic.val]}">
                 <label>
-                  <input type="checkbox" name="{{topic.val}}" id="{{topic.val}}" value="{{topic.val}}" ng-model="topic.sel">
+                  <input type="checkbox" name="{{topic.val}}" id="{{topic.val}}" value="{{topic.val}}" ng-model="filter[topic.val]">
                   {{topic.val}}
                 </label>
               </div>
@@ -20,9 +20,9 @@
           <span class="topic-heading">Type:</span>
           <ul>
             <li ng-repeat="type in types">
-              <div class="checkbox" ng-class="{active: filter[type.val]}">
+              <div class="checkbox" ng-class="{active: filtert[type.val]}">
                 <label>
-                  <input type="checkbox" name="{{type.val}}" id="{{type.val}}" value="{{type.val}}" ng-model="filter[type.val]">
+                  <input type="checkbox" name="{{type.val}}" id="{{type.val}}" value="{{type.val}}" ng-model="filtert[type.val]">
                   {{type.val}}
                 </label>
               </div>
@@ -49,7 +49,7 @@
               </p>
               <div class="item-tags">
                 <ul class="tags-list">
-                  <li ng-repeat="tag in result.tags">{{tag}}</li>
+                  <li ng-repeat="tag in result.tags.split(',')">{{tag}}</li>
                 </ul>
               </div>
               <div class="item-stats">
